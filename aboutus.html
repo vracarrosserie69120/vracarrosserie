@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>VRA Carrosserie</title>
+        
+        <link rel=”stylesheet” href=”text/style.css”>
+        
+        <link href="normalize.css" rel="stylesheet"> 
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Shadows+Into+Light&family=Work+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="external-css.css">
+        
+        
+        <style>
+             body {
+       
+      
+           background-image: url('garage.jpg'); /* Replace 'background-image.jpg' with your image file path or URL */
+           background-size: cover; /* Adjust the size property as needed */
+           background-repeat: no-repeat; /* Prevent the image from repeating */
+       
+       
+           }
+       
+       
+       
+       .textbox-container {
+        position: fixed;
+        top: 20px; 
+        right: 20px; 
+        padding-top: 50px;
+    }
+    nav ul li a:hover{
+    transform: 0.2s;
+    color: #52c5ff;
+}
+
+.container {
+position: relative;
+width: 100%;
+max-width: 1200px;
+
+padding: 50px 0px 0px 20px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family:"Days One" , sans-serif;
+}
+
+
+    nav {
+    display: flex;
+    background-color:darkslategray ;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+display: flex;
+align-items: center;
+padding: 0 10%;
+list-style: none;
+}
+
+nav ul li a {
+font-size:16px ;
+padding: 0 15px;
+color: white;
+transition: 0.2s;
+text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    transform: 0.2s;
+    color: #52c5ff;
+}
+
+.container {
+position: relative;
+width: 100%;
+max-width: 1200px;
+
+padding: 50px 0px 0px 20px;
+}
+
+.aboutme-section{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+#map {
+    position: fixed;
+            height: 200px;
+            width: 50%;
+            margin-top: 350px;
+        }
+
+    </style>
+ </head>
+
+ <body>
+    <nav>
+
+        <ul>
+            <li><a href="Vra.html">ACCUEIL</a></li>
+            <!--<li><a href="#services">SERVICES</a></li> -->
+            <li><a href="aboutus.html">LOCALISATION</a></li>
+           <!-- <li><a href="#contactus">Contact</a></li> -->
+        </ul>
+
+    </nav>
+     
+            <div class="textbox-container">
+                <div class="textbox">
+                    
+                    <p>105 AVENUE PAUL MARCELLIN
+                        69120 VAULX EN VELIN   </p>
+                    <p>Lundi au Samedi  </p>
+                    <p>09:00 - 12:00
+                        13:00 - 18:00 </p>
+                </div>
+            </div>
+            
+            <h1>My Location</h1>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var myLatLng = {lat: 45.77790451049805, lng:4.932235240936279};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: myLatLng
+                    });
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        title: 'Your Location'
+                    });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUAW6hK7G4I2In2PPp9TUBsIdjQ_HzomE&callback=initMap"
+                    async defer></script>
+
+            </body>
+        
+</html>
+
