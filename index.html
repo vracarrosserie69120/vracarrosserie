@@ -5,17 +5,13 @@
 
 <title>VRA Carrosserie</title>
 
-<link rel=”stylesheet” href=”text/style.css”>
-
-<link href="normalize.css" rel="stylesheet"> 
-
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Shadows+Into+Light&family=Work+Sans&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" type="text/css" href="external-css.css">
-
+<link rel="stylesheet" href="text/style.css">
+    <link href="normalize.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Shadows+Into+Light&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="external-css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <style>
 
@@ -177,7 +173,7 @@ label{
     <nav>
 
         <ul>
-            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="Vra.html">ACCUEIL</a></li>
             <!--<li><a href="#services">SERVICES</a></li> -->
             <li><a href="aboutus.html">LOCALISATION</a></li>
            <!-- <li><a href="#contactus">Contact</a></li> -->
@@ -185,12 +181,11 @@ label{
 
     </nav>
 
-    <div class="container">
-        <h1><nobr>VRA CARROSSERIE</nobr></h1>
+    
+    
 
-
-    </div>
-
+    
+    
     
     <section id="aboutme" class="aboutme">
         <div class="aboutme-section">
@@ -205,57 +200,31 @@ label{
     </section>
 
 
-
-    <section id="contactme" class="contact">
+    <section id="contactme" class="contact"> 
         <h2>Contactez-nous</h2>
-        <p>Vous souhaitez prendre rendez-vous dans notre garage pour une réparation ? Contactez-nous au 07 63 44 04 14 ou par mail à vracarrosserie@gmail.com  </p>
-            <p>Vous avez également la possibilité de nous envoyer un message directement via le formulaire ci-dessous.</p>
-   
-   <form class="contact-form"></form>
-
-   <div class="contact-details">
-
-    <label for="name">Nom</label>
- <input type="text" class="yourname" placeholder="Votre nom">
-
- 
-
-    <label for="email">Adresse e-mail</label>
-    <input type="email" class="email" placeholder="Votre adresse e-mail">
-
-   </div>
-
-   <div class="message">
-
-    <label for="msg">Message</label>
-    <textarea id="msg" rows="15"></textarea>
-    <button type="submit">Submit</button>
-
-   </div>
-   <script>
-    // JavaScript for form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-        // You can perform client-side validation here
-
-        // Send the form data to a server using AJAX
-        var xhr = new XMLHttpRequest();
-        var formData = new FormData(this);
-        xhr.open('POST', 'contactme-form.php'); // Replace with your server-side script
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                document.getElementById('status').textContent = xhr.responseText;
-            }
-        };
-        xhr.send(formData);
-    });
-</script>
-
+        <p>Vous souhaitez prendre rendez-vous dans notre garage pour une réparation ? Contactez-nous au 07 63 44 04 14 ou par mail à vracarrosserie@gmail.com</p>
+        <p>Vous avez également la possibilité de nous envoyer un message directement via le formulaire ci-dessous.</p>
+    
+        <form class="contact-form" action="contactme-form.php" method="POST">
+            <div class="contact-details">
+                <label for="name">Nom</label>
+                <input type="text" name="name" class="yourname" placeholder="Votre nom" required>
+    
+                <label for="email">Adresse e-mail</label>
+                <input type="email" name="email" class="email" placeholder="Votre adresse e-mail" required>
+            </div>
+    
+            <div class="message">
+                <label for="msg">Message</label>
+                <textarea id="msg" name="message" rows="15" required></textarea>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </section>
+    
+   
     
 
  </body>
  </html>
+
